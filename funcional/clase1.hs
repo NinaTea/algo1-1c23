@@ -14,4 +14,4 @@ h :: Integer -> Integer
 h x = f (g x)
 
 k :: Integer -> Integer
-k x = g (f x)
+k x = g (f x )
