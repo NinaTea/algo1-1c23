@@ -41,15 +41,12 @@ mismoIntervalo x y | x <= 3 && y <= 3 = True
                    | otherwise = False
 
 
-sumaDistintos_w :: Integer -> Integer -> Integer -> Integer
-sumaDistintos_w x y z | hayIguales x y z = undefined
-                      | otherwise = x + y + z
-                    where hayIguales x y z | x == y = True
-                                           | y == z = True
-                                           | x == z = True
 
 sumaDistintos :: Integer -> Integer -> Integer -> Integer
-sumaDistintos x y z | x == y || y == z || z == x = undefined
+sumaDistintos x y z | x == y && y == z = undefined
+                    | x == y && x /= z = y + z
+                    | x == z && x /= y = x + y
+                    | y == z && y /= x = z + x 
                     | otherwise = x + y + z
 
 esMultiploDe :: Integer -> Integer -> Bool
