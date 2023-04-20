@@ -40,8 +40,6 @@ mismoIntervalo x y | x <= 3 && y <= 3 = True
                    | x > 7 && y > 7 = True
                    | otherwise = False
 
-
-
 sumaDistintos :: Integer -> Integer -> Integer -> Integer
 sumaDistintos x y z | x == y && y == z = undefined
                     | x == y && x /= z = y + z
@@ -101,10 +99,6 @@ crearPar a b = (a, b)
 invertir :: (a, b) -> (b,a)
 invertir (x, y) = (y, x)
 
-
-
-
-
 todosMenores :: (Integer, Integer, Integer) -> Bool
 todosMenores (a, b, c) = (fn a) > (gn a) && (fn b) > (gn b) && (fn c) > (gn c)
                       where fn x | x >= 7 = x*x
@@ -112,8 +106,6 @@ todosMenores (a, b, c) = (fn a) > (gn a) && (fn b) > (gn b) && (fn c) > (gn c)
                             gn x | esPar x = div x 2
                                  | otherwise = 3 * x + 1 
                                  where esPar a = mod a 2 == 0
-
-
 
 bisiesto :: Integer -> Bool
 bisiesto año = not (not (esMultiploDe año 4) || ((esMultiploDe año 100) && not (esMultiploDe año 400)))
