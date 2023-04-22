@@ -120,6 +120,7 @@ mayorDigitoPar 0 = 0
 mayorDigitoPar n | mod n 2 == 0 = max (mod n 10) (mayorDigitoPar (div n 10))
                  | otherwise = mayorDigitoPar (div n 10)
 
-
+{-
 esSumaInicialDePrimos :: Int ->Bool
 esSumaInicialDePrimos n = esSumaInicialDePrimosDesde n 0 2
+-}
