@@ -102,9 +102,10 @@ multiplosDeN n (x:xs) | x `esMultiploDe` n = x : (multiplosDeN n xs)
 
 ordenar :: [Integer] -> [Integer]
 ordenar [] = []
-ordenar (x:xs) | x == maxm = maxm : (ordenar xs)
-               | otherwise = maxm : (ordenar (quitar maxm (x:xs)))
+ordenar (x:xs) | x == maxm = (ordenar xs) ++ [maxm]
+               | otherwise = (ordenar (quitar maxm (x:xs))) ++ [maxm]
                where maxm = maximo (x:xs)
+
 
 sacarBlancosRepetidos :: [Char] -> [Char]
 sacarBlancosRepetidos [] = []
